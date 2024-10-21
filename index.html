@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Password Generator</h1>
+        <h1> Password Generator </h1>
         <!-- TODO: Create an input field for password length (between 8-128 characters) -->
         <label for="length">Password Length:</label>
         <input type="number" id="length" value="12" min="8" max="128">
@@ -28,14 +28,19 @@
             <input type="checkbox" id="includeSpecialChars"> Include Special Characters
         </label><br>
         
-        <!-- TODO: Create a button to generate the password -->
         <button id="generateBtn">Generate Password</button>
-        
-        <!-- TODO: Create a text field to display the generated password -->
-        <p id="passwordOutput"></p>
-
-        <!-- BONUS: Add a "Copy to Clipboard" button -->
         <button id="copyBtn">Copy to Clipboard</button>
+        <p id="passwordOutput"></p>
+        <div
+        class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        </div>
+
     </div>
 
     <script src="script.js"></script>
