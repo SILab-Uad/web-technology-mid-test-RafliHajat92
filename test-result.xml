@@ -1,55 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<passwordGenerator>
-    <htmlFile name="index.html">
-        <meta charset="UTF-8"/>
-        <title>Password Generator</title>
-        <stylesheet href="style.css"/>
-        <container class="container">
-            <h1>Password Generator</h1>
-            <inputField label="Panjang Password" type="number" id="length" min="8" max="128" value="12"/>
-            <criteria>
-                <checkbox label="Sertakan Huruf Besar" id="includeUppercase" checked="false"/>
-                <checkbox label="Sertakan Huruf Kecil" id="includeLowercase" checked="true"/>
-                <checkbox label="Sertakan Angka" id="includeNumbers" checked="true"/>
-                <checkbox label="Sertakan Karakter Spesial" id="includeSpecialChars" checked="false"/>
-            </criteria>
-            <buttons>
-                <button id="generateBtn">Buat Password</button>
-                <button id="copyBtn">Salin ke Clipboard</button>
-            </buttons>
-            <output id="passwordOutput"/>
-        </container>
-        <scripts>
-            <script src="script.js"/>
-            <script src="dom.js"/>
-        </scripts>
-    </htmlFile>
-
-    <jsFile name="dom.js">
-        <eventHandler trigger="click" target="generateBtn">
-            <action>Buat Password</action>
-            <update id="passwordOutput">Tampilkan Password yang Dibuat</update>
-        </eventHandler>
-        <eventHandler trigger="click" target="copyBtn">
-            <condition>jika passwordOutput tidak kosong</condition>
-            <action>Salin ke Clipboard</action>
-        </eventHandler>
-    </jsFile>
-
-    <jsFile name="script.js">
-        <function name="generatePassword">
-            <parameter name="length" type="integer"/>
-            <parameter name="options" type="object"/>
-            <charset>
-                <uppercase>"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</uppercase>
-                <lowercase>"abcdefghijklmnopqrstuvwxyz"</lowercase>
-                <numbers>"0123456789"</numbers>
-                <specialChars>"!@#$%^&*()"</specialChars>
-            </charset>
-            <loop type="for" start="0" end="length">
-                <action>Buat karakter acak dari charset</action>
-            </loop>
-            <return>Password yang Dibuat</return>
-        </function>
-    </jsFile>
-</passwordGenerator>
+<testsuites name="Mocha Tests" time="0.011" tests="6" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-10-21T08:58:06" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Password Generator Tests" timestamp="2024-10-21T08:58:06" tests="6" file="C:\Users\willsty\web-technology-mid-test-willyyypatootieee\test\test.js" time="0.009" failures="0">
+    <testcase name="Password Generator Tests should generate a password of the specified length" time="0.002" classname="should generate a password of the specified length">
+    </testcase>
+    <testcase name="Password Generator Tests should contain uppercase letters if selected" time="0.000" classname="should contain uppercase letters if selected">
+    </testcase>
+    <testcase name="Password Generator Tests should contain lowercase letters if selected" time="0.000" classname="should contain lowercase letters if selected">
+    </testcase>
+    <testcase name="Password Generator Tests should contain numbers if selected" time="0.000" classname="should contain numbers if selected">
+    </testcase>
+    <testcase name="Password Generator Tests should contain special characters if selected" time="0.000" classname="should contain special characters if selected">
+    </testcase>
+    <testcase name="Password Generator Tests should throw an error if no character type is selected" time="0.000" classname="should throw an error if no character type is selected">
+    </testcase>
+  </testsuite>
+</testsuites>
