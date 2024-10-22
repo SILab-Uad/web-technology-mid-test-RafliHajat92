@@ -42,9 +42,7 @@ document.getElementById('generateBtn').addEventListener('click', () => {
         document.getElementById('passwordOutput').textContent = password;
         document.getElementById('passwordOutput').style.color = "black"; // Kembali ke warna normal jika berhasil
     } catch (error) {
-        // Menangkap error dan menampilkannya di elemen passwordOutput
-        document.getElementById('passwordOutput').textContent = error.message;
-        document.getElementById('passwordOutput').style.color = "red"; // Set warna merah untuk menunjukkan error
+        alert(error.message);
+        document.getElementById('passwordOutput').textContent = "";
     }
 });
-
